@@ -23,14 +23,14 @@ void Shield2AMotor::control(signed int motor1Speed, signed int motor2Speed)
     if(motor1Speed >= 0)
     {
       if(motor1Speed > 100) motor1Speed = 100;
-      motor1Speed = motor1Speed * 2.5;
+      motor1Speed = motor1Speed * 2.55;
       analogWrite(EN1, motor1Speed);
       digitalWrite(DIR1, LOW);
     }
     else if(motor1Speed < 0)
     {
       if(motor1Speed < -100) motor1Speed = -100;
-      motor1Speed = motor1Speed * -2.5;
+      motor1Speed = motor1Speed * -2.55;
       analogWrite(EN1, motor1Speed);
       digitalWrite(DIR1, HIGH);
     }
@@ -38,14 +38,14 @@ void Shield2AMotor::control(signed int motor1Speed, signed int motor2Speed)
     if(motor2Speed >= 0)
     {
       if(motor2Speed > 100) motor2Speed = 100;
-      motor2Speed = motor2Speed * 2.5;
+      motor2Speed = motor2Speed * 2.55;
       analogWrite(EN2, motor2Speed);
       digitalWrite(DIR2, LOW);
     }
     else if(motor2Speed < 0)
     {
       if(motor2Speed < -100) motor2Speed = -100;
-      motor2Speed = motor2Speed * -2.5;
+      motor2Speed = motor2Speed * -2.55;
       analogWrite(EN2, motor2Speed);
       digitalWrite(DIR2, HIGH);
     }
